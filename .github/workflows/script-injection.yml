@@ -13,5 +13,5 @@ jobs:
           if [[ "$issue_title" == *"bug"* ]]; then 
           echo "Issue is about a bug!"
           else 
-          echo "Issue is not about a *"bug"
+          echo "Issue is not about a *"bug""
           fi 
