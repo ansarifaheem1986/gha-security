@@ -4,8 +4,22 @@ on:
     inputs:
       name: 
         description: 'Production Cluster Name'
-        default: 'AKS1'     # different values provided to wf
+        #default: 'AKS1'     # different values provided to wf
+        type: choice
+        options:
+          - AKS1
+          - AKS2
+          - AKS3
         required: true
+      environment:
+        description: 'Deployment Environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+          - development
 jobs:
   deploy:
     runs-on: ubuntu-latest
