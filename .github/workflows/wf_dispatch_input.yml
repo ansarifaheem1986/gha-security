@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       name: 
-        description: 'Production Cluster Name'
+        description: 'Select Cluster Name'
         #default: 'AKS1'     # different values provided to wf
         type: choice
         options:
@@ -20,6 +20,11 @@ on:
           - production
           - staging
           - development
+      enableFeatureX:
+        description: 'Enable Feature X?'
+        required: false
+        type: boolean
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
