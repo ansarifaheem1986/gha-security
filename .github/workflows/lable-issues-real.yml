@@ -6,8 +6,11 @@ on:
 
 jobs:
   assign-lable:
+    permissions:
+      issues: write
     runs-on: ubuntu-latest
-    permissions: write-all
+    #One way of adding the permission
+    #permissions: write-all
     steps:
       - uses: actions/checkout@v3
 
