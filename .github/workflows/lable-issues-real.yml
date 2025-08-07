@@ -8,7 +8,6 @@ jobs:
   assign-lable:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
       - uses: actions/checkout@v3
 
       - name: Assign label
@@ -20,4 +19,3 @@ jobs:
           -H "content-type: application/json" \
           -d '{"labels": ["bug"]}' \
           --fail
-      
