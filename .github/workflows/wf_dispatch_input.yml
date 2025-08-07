@@ -26,7 +26,17 @@ on:
         type: boolean
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Waiting to build the artifacts
+        run: echo "Building the artifacts......"
+
+      - name: Upload the artifact
+        run: echo "Uploading the artifact....."
+
   deploy:
+    needs: build 
     runs-on: ubuntu-latest
 
     steps:
