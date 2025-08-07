@@ -4,7 +4,7 @@ on:
     inputs:
       name: 
         description: 'Production Cluster Name'
-        default: ['AKS1', 'AKS2']     # different values provided to wf
+        default: 'AKS1'     # different values provided to wf
         required: true
 jobs:
   deploy:
