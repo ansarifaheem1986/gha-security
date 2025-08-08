@@ -34,9 +34,16 @@ jobs:
 
       - name: Upload the artifact
         run: echo "Uploading the artifact....."
+  
+  testing:
+    needs: build 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Waiting for testing the code
+        run: echo "Testing the code...."
 
   deploy:
-    needs: build 
+    needs: testing 
     runs-on: ubuntu-latest
 
     steps:
